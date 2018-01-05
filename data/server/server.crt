@@ -1,0 +1,83 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 1 (0x1)
+    Signature Algorithm: sha256WithRSAEncryption
+        Issuer: CN=www.iewb.net
+        Validity
+            Not Before: Jan  5 22:01:05 2018 GMT
+            Not After : Jan  3 22:01:05 2028 GMT
+        Subject: CN=www.iewb.net.jimmy
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (2048 bit)
+                Modulus:
+                    00:cb:ba:37:de:ef:33:50:4f:13:67:b9:78:fa:be:
+                    ca:42:ca:b6:81:37:03:be:e3:55:5a:64:4c:ba:0d:
+                    4b:0a:71:bf:5b:5d:09:82:6f:4d:bf:6c:a5:d9:34:
+                    1c:93:c0:36:37:2e:f6:0d:6d:14:8b:0e:4f:54:88:
+                    11:f0:32:32:82:f3:e5:b0:99:0f:19:27:6c:ab:6f:
+                    1b:6f:25:8d:2d:01:7d:9c:aa:c1:f5:90:a4:4c:46:
+                    5e:fe:0f:7b:e5:0e:86:0b:d8:bc:96:2d:0c:54:08:
+                    08:c9:f1:46:3d:52:cb:79:d5:7b:4f:01:92:07:cb:
+                    84:f1:05:39:fc:61:4c:7b:be:0b:29:bd:93:d3:84:
+                    2d:62:df:db:5e:9d:f8:94:46:56:ba:bc:af:65:28:
+                    59:ca:3f:cb:2f:f0:61:0c:81:d1:b0:ad:a5:0b:79:
+                    5e:72:54:c0:4c:0c:83:d7:fd:6a:43:0e:33:56:ed:
+                    fc:01:ca:3c:3c:7a:ad:b4:63:ac:43:36:0a:33:f0:
+                    b8:ba:75:5a:98:d4:ae:4e:4f:16:e6:76:c1:eb:49:
+                    8e:6e:ec:40:fb:0d:26:35:09:11:2e:f2:58:19:fa:
+                    01:b6:bc:08:20:aa:1c:86:ff:f7:a6:da:a3:1c:83:
+                    ec:2d:dd:b6:f9:ab:57:55:82:01:39:28:7f:51:2c:
+                    66:c9
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Basic Constraints: 
+                CA:FALSE
+            X509v3 Subject Key Identifier: 
+                4E:61:F4:C6:20:AE:F8:DD:4C:3F:04:DA:A9:AE:B2:7A:C9:94:F2:1A
+            X509v3 Authority Key Identifier: 
+                keyid:EA:87:47:7A:F2:69:38:15:ED:E7:99:7E:52:2C:7A:B0:66:84:37:FD
+                DirName:/CN=www.iewb.net
+                serial:D6:9B:83:B0:9B:54:DE:0C
+
+            X509v3 Extended Key Usage: 
+                TLS Web Server Authentication
+            X509v3 Key Usage: 
+                Digital Signature, Key Encipherment
+    Signature Algorithm: sha256WithRSAEncryption
+         87:54:5c:ed:42:4a:2c:49:62:bc:08:f6:02:5a:e7:86:bc:b0:
+         ef:f8:cd:4c:78:40:00:49:51:5d:76:f9:38:d5:eb:2e:5e:44:
+         2e:fe:32:a8:c1:64:be:9e:96:70:db:5d:85:d7:2e:09:de:bd:
+         56:89:77:0a:98:b7:0e:bd:99:69:02:c7:55:ed:26:5a:5b:6c:
+         7b:4f:72:e3:f8:72:86:1e:a7:82:b3:81:59:70:dd:2f:1e:6e:
+         8d:14:7b:68:43:fd:6e:57:e1:06:8c:c1:d3:35:fd:58:35:8f:
+         9c:57:cf:17:c0:fe:07:70:a8:00:e6:92:2b:65:56:8e:33:0d:
+         67:0c:59:c3:22:c6:28:71:26:6b:16:8b:54:d5:e9:55:9f:35:
+         41:f1:bb:ae:58:44:97:7a:ab:6a:92:97:76:89:99:65:e8:08:
+         f2:00:85:6f:b2:f8:87:4e:40:e3:f6:b7:0b:79:e8:13:10:83:
+         89:0d:8e:57:a6:32:08:9e:1a:c5:8c:ef:36:4f:a3:49:ea:99:
+         e2:ab:80:d0:47:ec:bd:97:93:19:6a:14:dc:db:4d:f7:fe:be:
+         3d:c4:66:6b:a5:34:0d:24:64:c0:c2:a3:0a:a8:ea:0e:c2:79:
+         ea:aa:5c:d7:70:0f:39:0c:15:3b:e2:0f:72:c5:1f:99:9e:2e:
+         cc:06:f3:d8
+-----BEGIN CERTIFICATE-----
+MIIDSDCCAjCgAwIBAgIBATANBgkqhkiG9w0BAQsFADAXMRUwEwYDVQQDDAx3d3cu
+aWV3Yi5uZXQwHhcNMTgwMTA1MjIwMTA1WhcNMjgwMTAzMjIwMTA1WjAdMRswGQYD
+VQQDDBJ3d3cuaWV3Yi5uZXQuamltbXkwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAw
+ggEKAoIBAQDLujfe7zNQTxNnuXj6vspCyraBNwO+41VaZEy6DUsKcb9bXQmCb02/
+bKXZNByTwDY3LvYNbRSLDk9UiBHwMjKC8+WwmQ8ZJ2yrbxtvJY0tAX2cqsH1kKRM
+Rl7+D3vlDoYL2LyWLQxUCAjJ8UY9Ust51XtPAZIHy4TxBTn8YUx7vgspvZPThC1i
+39tenfiURla6vK9lKFnKP8sv8GEMgdGwraULeV5yVMBMDIPX/WpDDjNW7fwByjw8
+eq20Y6xDNgoz8Li6dVqY1K5OTxbmdsHrSY5u7ED7DSY1CREu8lgZ+gG2vAggqhyG
+//em2qMcg+wt3bb5q1dVggE5KH9RLGbJAgMBAAGjgZgwgZUwCQYDVR0TBAIwADAd
+BgNVHQ4EFgQUTmH0xiCu+N1MPwTaqa6yesmU8howRwYDVR0jBEAwPoAU6odHevJp
+OBXt55l+Uix6sGaEN/2hG6QZMBcxFTATBgNVBAMMDHd3dy5pZXdiLm5ldIIJANab
+g7CbVN4MMBMGA1UdJQQMMAoGCCsGAQUFBwMBMAsGA1UdDwQEAwIFoDANBgkqhkiG
+9w0BAQsFAAOCAQEAh1Rc7UJKLElivAj2Alrnhryw7/jNTHhAAElRXXb5ONXrLl5E
+Lv4yqMFkvp6WcNtdhdcuCd69Vol3Cpi3Dr2ZaQLHVe0mWltse09y4/hyhh6ngrOB
+WXDdLx5ujRR7aEP9blfhBozB0zX9WDWPnFfPF8D+B3CoAOaSK2VWjjMNZwxZwyLG
+KHEmaxaLVNXpVZ81QfG7rlhEl3qrapKXdomZZegI8gCFb7L4h05A4/a3C3noExCD
+iQ2OV6YyCJ4axYzvNk+jSeqZ4quA0EfsvZeTGWoU3NtN9/6+PcRma6U0DSRkwMKj
+CqjqDsJ56qpc13APOQwVO+IPcsUfmZ4uzAbz2A==
+-----END CERTIFICATE-----
