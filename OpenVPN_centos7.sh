@@ -17,7 +17,7 @@ printf "
 SERVER_IP=`ip addr |grep "inet"|grep -v "127.0.0.1"|grep -v "inet6" |cut -d: -f2|awk '{print $2}'|cut -d/ -f1|awk '{print $1}'`
 VPN_IP=`curl ipv4.icanhazip.com`
 sed -i '/net.ipv4.ip_forward/s/0/1/' /etc/sysctl.conf
-echo "1" > /proc/sys/net/ipv4/ip_forward
+#echo "1" > /proc/sys/net/ipv4/ip_forward
 yum -y install openvpn &&
 /bin/cp -f ./data/server/* /etc/openvpn/
 /bin/cp -f ./data/client.zip /etc/openvpn/
