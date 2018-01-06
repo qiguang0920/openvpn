@@ -16,17 +16,23 @@ printf "
 [ ! -e '/usr/bin/curl' ] && yum -y install curl
 SERVER_IP=`ip addr |grep "inet"|grep -v "127.0.0.1"|grep -v "inet6" |cut -d: -f2|awk '{print $2}'|cut -d/ -f1|awk '{print $1}'`
 VPN_IP=`curl ipv4.icanhazip.com`
-echo 'net.ipv4.ip_forward = 1' >> /etc/sysctl.conf   
+sed -i '/net.ipv4.ip_forward/s/0/1/' /etc/sysctl.conf
 echo "1" > /proc/sys/net/ipv4/ip_forward
-yum -y install openvpn easy-rsa &&
+yum -y install openvpn &&
 /bin/cp -f ./data/server/* /etc/openvpn/
 /bin/cp -f ./data/client.zip /etc/openvpn/
 sed -i "25a local $SERVER_IP" /etc/openvpn/server.conf
 systemctl start firewalld
 firewall-cmd --add-port 1194/udp --permanent
 firewall-cmd --reload
-systemctl stop firewalld
-echo '/usr/sbin/openvpn /etc/openvpn/server.conf' >>/etc/rc.d/rc.local
+if [ ! -e /etc/openvpn/start_openvpn.sh ];then
+cat > /etc/openvpn/start_openvpn.sh <<EOF
+#!/bin/bash
+nohup /usr/sbin/openvpn /etc/openvpn/server.conf &
+EOF
+fi
+echo '/bin/sh /etc/openvpn/start_openvpn.sh' >>/etc/rc.d/rc.local
+chmod +x /etc/rc.d/rc.local /etc/openvpn/start_openvpn.sh
 clear
 echo -e "\033[32mYour OpenVPN installed successfully\033[0m"
 echo -e "your external IP \033[32m${VPN_IP}\033[0m"
@@ -39,5 +45,5 @@ done
 if [ "$isconfirm" = "$confirm" ];then
 /usr/sbin/openvpn /etc/openvpn/server.conf
 else
-echo -e "You input others,so the OpenVPN is not running,pleale run \033[32m'/usr/sbin/openvpn /etc/openvpn/server.conf '\033[0m to start it."
+echo -e "You input others,so the OpenVPN is not running,pleale run \033[32m'nohup /usr/sbin/openvpn /etc/openvpn/server.conf &'\033[0m to start it."
 fi
