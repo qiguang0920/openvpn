@@ -26,7 +26,7 @@ systemctl start firewalld
 firewall-cmd --add-port 1194/udp --permanent
 firewall-cmd --reload
 systemctl stop firewalld
-/usr/sbin/openvpn /etc/openvpn/server.conf >>/etc/rc.d/rc.local
+echo '/usr/sbin/openvpn /etc/openvpn/server.conf' >>/etc/rc.d/rc.local
 clear
 echo -e "\033[32mYour OpenVPN installed successfully\033[0m"
 echo -e "your external IP \033[32m${VPN_IP}\033[0m"
@@ -37,6 +37,7 @@ read -p "Please input {yes} to start the OpenVPN: " isconfirm
 [ -n "$isconfirm" ] && break
 done
 if [ "$isconfirm" = "$confirm" ];then
+/usr/sbin/openvpn /etc/openvpn/server.conf
 else
 echo -e "You input others,so the OpenVPN is not running,pleale run \033[32m'/usr/sbin/openvpn /etc/openvpn/server.conf '\033[0m to start it."
 fi
