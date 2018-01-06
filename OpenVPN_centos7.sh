@@ -43,7 +43,7 @@ read -p "Please input {yes} to start the OpenVPN: " isconfirm
 [ -n "$isconfirm" ] && break
 done
 if [ "$isconfirm" = "$confirm" ];then
-/usr/sbin/openvpn /etc/openvpn/server.conf
+/bin/sh /etc/openvpn/start_openvpn.sh
 else
 echo -e "You input others,so the OpenVPN is not running,pleale run \033[32m'nohup /usr/sbin/openvpn /etc/openvpn/server.conf &'\033[0m to start it."
 fi
