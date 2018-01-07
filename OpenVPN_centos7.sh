@@ -20,8 +20,7 @@ echo "net.ipv4.ip_forward=1" >> /etc/sysctl.conf
 sed -i '/net.ipv4.ip_forward/s/0/1/' /etc/sysctl.conf
 #echo "1" > /proc/sys/net/ipv4/ip_forward
 yum -y install openvpn &&
-/bin/cp -f ./data/server/* /etc/openvpn/
-/bin/cp -f ./data/client.zip /etc/openvpn/
+/bin/cp -rf ./data/* /etc/openvpn/
 sed -i "25a local $SERVER_IP" /etc/openvpn/server.conf
 systemctl start firewalld
 firewall-cmd --add-port 1194/udp --permanent
