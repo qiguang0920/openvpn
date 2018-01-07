@@ -32,7 +32,7 @@ nohup /usr/sbin/openvpn /etc/openvpn/server.conf &
 EOF
 fi
 echo '/bin/sh /etc/openvpn/start_openvpn.sh' >>/etc/rc.d/rc.local
-chmod +x /etc/rc.d/rc.local /etc/openvpn/start_openvpn.sh
+chmod +x /etc/rc.d/rc.local /etc/openvpn/start_openvpn.sh /etc/openvpn/checkpsw.sh
 clear
 echo -e "\033[32mYour OpenVPN installed successfully\033[0m"
 echo -e "your external IP \033[32m${VPN_IP}\033[0m"
