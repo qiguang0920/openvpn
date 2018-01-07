@@ -29,7 +29,6 @@ firewall-cmd --permanent --add-masquerade
 firewall-cmd --permanent --add-rich-rule='rule family=ipv4 source address=10.8.0.0/24 masquerade'
 firewall-cmd --reload
 chmod +x /etc/openvpn/checkpsw.sh
-systemctl start openvpn@server
 systemctl enable openvpn@server
 clear
 echo -e "\033[32mYour OpenVPN installed successfully\033[0m"
@@ -41,7 +40,7 @@ read -p "Please input {yes} to start the OpenVPN: " isconfirm
 [ -n "$isconfirm" ] && break
 done
 if [ "$isconfirm" = "$confirm" ];then
-/bin/sh /etc/openvpn/start_openvpn.sh
+systemctl start openvpn@server
 else
-echo -e "You input others,so the OpenVPN is not running,pleale run \033[32m'nohup /usr/sbin/openvpn /etc/openvpn/server.conf &'\033[0m to start it."
+echo -e "You input others,so the OpenVPN is not running,pleale run \033[32m'systemctl start openvpn@server'\033[0m to start it."
 fi
