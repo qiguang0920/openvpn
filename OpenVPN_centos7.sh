@@ -28,14 +28,9 @@ firewall-cmd --add-port 1194/tcp --permanent
 firewall-cmd --permanent --add-masquerade
 firewall-cmd --permanent --add-rich-rule='rule family=ipv4 source address=10.8.0.0/24 masquerade'
 firewall-cmd --reload
-if [ ! -e /etc/openvpn/start_openvpn.sh ];then
-cat > /etc/openvpn/start_openvpn.sh <<EOF
-#!/bin/bash
-nohup /usr/sbin/openvpn /etc/openvpn/server.conf &
-EOF
-fi
-echo '/bin/sh /etc/openvpn/start_openvpn.sh' >>/etc/rc.d/rc.local
-chmod +x /etc/rc.d/rc.local /etc/openvpn/start_openvpn.sh /etc/openvpn/checkpsw.sh
+chmod +x /etc/openvpn/checkpsw.sh
+systemctl start openvpn@server
+systemctl enable openvpn@server
 clear
 echo -e "\033[32mYour OpenVPN installed successfully\033[0m"
 echo -e "your external IP \033[32m${VPN_IP}\033[0m"
