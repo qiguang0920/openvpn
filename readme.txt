@@ -18,3 +18,4 @@ git clone https://github.com/qiguang0920/openvpn.git && cd openvpn &&chmod +x Op
 7.无认服务器端还是客户端证书密码都是www.iewb.net，手机登陆的时候会用到证书密码
 
 脚本适合想快速部署而且偏懒得童鞋。如果对安全要求较高，在安装完成后可以重新生成证书，再配置下server.conf指向你生成的证书就可以了。客户端同样。
+devtest
