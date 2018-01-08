@@ -5,9 +5,10 @@
 在你的服务器上执行：
 
 git clone https://github.com/qiguang0920/openvpn.git && cd openvpn &&chmod +x OpenVPN_centos7.sh &&./OpenVPN_centos7.sh
+
 就可以自动安装。
 
-　脚本说明：
+
 　脚本说明：
 1。使用的默认1194/udp端口
 2。脚本适用于centos7系统，如果是其它redhat系列的系统，需要手动处理防火墙端口，deban系列不支持
