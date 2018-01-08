@@ -1,4 +1,4 @@
-　如果脚本有问题可以欢迎反馈：https://www.iewb.net/qg/4727.html
+如果脚本有问题可以欢迎反馈：https://www.iewb.net/qg/4727.html
 
 脚本是根据我的需求编写的，使用生成好的密钥/证书，服务端使用脚本安装完成后启动openvpn，把/etc/openvpn目录的client.zip下载下来，解压后放在客户端修改成你的服务端ip就可以使用。
 
@@ -9,7 +9,7 @@ git clone https://github.com/qiguang0920/openvpn.git && cd openvpn &&chmod +x Op
 就可以自动安装。
 
 
-　脚本说明：
+脚本说明：
 1。使用的默认1194/udp端口
 2。脚本适用于centos7系统，如果是其它redhat系列的系统，需要手动处理防火墙端口，deban系列不支持
 3。开启了redirect-gateway，firewalld开启了转发
