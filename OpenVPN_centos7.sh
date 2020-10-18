@@ -28,6 +28,8 @@ firewall-cmd --add-port 1194/tcp --permanent
 firewall-cmd --permanent --add-masquerade
 firewall-cmd --permanent --add-rich-rule='rule family=ipv4 source address=10.8.0.0/24 masquerade'
 firewall-cmd --reload
+setenforce 0
+sed -i 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/selinux/config
 chmod +x /etc/openvpn/checkpsw.sh
 systemctl enable openvpn@server
 clear
